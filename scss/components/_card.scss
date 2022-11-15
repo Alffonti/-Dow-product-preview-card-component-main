@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the card component.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.card {
+  background-color: var.$white;
+  max-width: px-to-rem(600px);
+  margin: 0 auto;
+  border-radius: px-to-rem(8px);
+  overflow: hidden;
+
+  @include mix.respond-to(small) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__content {
+    padding: px-to-em(28px) px-to-em(24px);
+
+    @include mix.respond-to(small) {
+      padding: px-to-em(32px);
+    }
+  }
+
+  &__subtitle {
+    font-size: px-to-rem(12px);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: px-to-rem(18px);
+  }
+
+  &__title {
+    font-family: var.$heading-font-stack;
+    color: var.$dark-blue;
+    font-size: px-to-rem(28px);
+    margin-bottom: px-to-rem(26px);
+
+    @include mix.respond-to(small) {
+      font-size: px-to-rem(24px);
+    }
+
+    @include mix.respond-to(small) {
+      margin-bottom: px-to-rem(16px);
+    }
+  }
+
+  &__text {
+    font-size: px-to-rem(14px);
+    line-height: 1.7;
+    margin-bottom: px-to-rem(34px);
+
+    @include mix.respond-to(small) {
+      margin-bottom: px-to-rem(24px);
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+
+    &--active {
+      color: var.$brand-color;
+      font-size: px-to-rem(28px);
+      font-family: var.$heading-font-stack;
+      margin-right: px-to-rem(16px);
+    }
+
+    &--inactive {
+      font-size: px-to-rem(14px);
+      text-decoration: line-through;
+    }
+  }
+}

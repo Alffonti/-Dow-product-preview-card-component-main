@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use "../abstracts/variables" as var;
+
+.btn {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var.$brand-color;
+  color: var.$white;
+  text-align: center;
+  font-weight: 700;
+  padding: px-to-rem(16px);
+  border-radius: px-to-rem(8px);
+  margin-top: px-to-rem(24px);
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+
+  &:hover {
+    background-color: var.$dark-blue;
+  }
+}
