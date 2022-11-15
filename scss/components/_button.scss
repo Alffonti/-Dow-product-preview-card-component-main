@@ -5,7 +5,7 @@
 
 .btn {
   display: flex;
-  gap: 1em;
+  gap: px-to-rem(8px);
   justify-content: center;
   align-items: center;
   width: 100%;
